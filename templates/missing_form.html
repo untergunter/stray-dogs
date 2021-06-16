@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1> In this form you can report your lost dog.</h1>
+
+
+<form action="/new_missing" method="post" enctype="multipart/form-data">
+
+    <h4> please enter the date at which your pet was lost </h4>
+    <input type="date" name="lost_at_date">
+
+    <h4> please enter the time at which your pet was lost </h4>
+    <input type="time" name="lost_at_time">
+
+    <h4> please enter an image of your pet </h4>
+    <input type="file" name="dog_image">
+
+    <h4> please enter an image of the location where your pet was lost.
+    for this photo the GPS must be enabled </h4>
+    <input type="file" name="lost_location_image">
+
+<!--    <h4> please enter the mail to which a found massage will be sent to </h4>-->
+<!--    <input type="email" name="email">-->
+
+    <input type="submit">
+</form>
+
+{% endblock %}
